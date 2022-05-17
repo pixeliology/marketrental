@@ -45,7 +45,7 @@ img {
     }
 }
 .LinkName{
-    opacity:${props => props.show ? '1' : '0'};
+    display:${props => props.show ? 'block' : 'none'};
     font-size: 20px;
     font-weight: 600;
     color: #fff;
@@ -185,7 +185,7 @@ export const ProflieIcon = styled.div`
     }
 
 
-` 
+`
 
 export const ProfileBar = styled.div`
     position: fixed;
@@ -200,10 +200,8 @@ export const ProfileBar = styled.div`
     box-shadow: 5px 10px 10px 8px #5c5c5c8c, -5px -10px 10px #0000001c;
 `
 
-export const Formbox =styled.div`
+export const Formbox = styled.div`
     margin: 10px 5%;
-    display:${props => props.forgotpsw ? 'none' : 'block'};
-
     .IconForm{
         margin:0;
         font-size: 50px;
@@ -232,7 +230,6 @@ export const Formbox =styled.div`
     .inputform{
         border:2px solid #C2DBFE;
         margin-bottom:5px;
-        border-radius:10px;
     }
     .forgotpsw{
         font-size:14px;
@@ -251,5 +248,9 @@ export const Formbox =styled.div`
         font-size:14px;
         color:#0d6efd;
         text-align:center;
+    }
+    .login-form{
+        display:${props => props.forgotpsw ? 'none' : 'block'};
+        position:absolute;
     }
 `
