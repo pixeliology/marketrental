@@ -232,8 +232,10 @@ export const Formbox = styled.div`
         margin-bottom:5px;
     }
     .forgotpsw{
+        width:fit-content;
         font-size:14px;
         color:#0d6efd;
+        float:right;
     }
     .signup:hover,.forgotpsw:hover{
         color:#02155A;
@@ -245,12 +247,20 @@ export const Formbox = styled.div`
         background-color:#02155A;
     }
     .signup{
+        width:fit-content;
         font-size:14px;
         color:#0d6efd;
-        text-align:center;
+        margin:0 auto;
     }
     .login-form{
-        display:${props => props.forgotpsw ? 'none' : 'block'};
-        position:absolute;
+        display:${props => props.signinform ? 'none' : 'block'};
     }
+    .forgot-form{
+        display:${props => props.forgotpsw ? 'block' : 'none'};
+    }
+    .signup-form{
+        display:${props => props.signupform ? 'block' : 'none'};
+    }
+
+
 `
